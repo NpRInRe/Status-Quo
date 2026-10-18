@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: scripts/build_graph.py
+
+website:
+  title: "Frameworks for Policy, Law & Society"
+  description: "A curated knowledge graph of conceptual frameworks across law, policy, economics, and society."
+  site-url: "https://yourusername.github.io/policy-frameworks"
+  navbar:
+    background: "#0f172a"
+    foreground: "#f8fafc"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Graph View"
+        href: graph.qmd
+      - text: "Law"
+        href: law/index.qmd
+      - text: "Policy"
+        href: policy/index.qmd
+      - text: "Economics"
+        href: economics/index.qmd
+      - text: "Society"
+        href: society/index.qmd
+    right:
+      - text: "About"
+        href: about.qmd
+      - icon: github
+        href: https://github.com
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: assets/styles.css
+    toc: true
+    toc-depth: 3
+    search: true
+    smooth-scroll: true

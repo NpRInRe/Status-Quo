@@ -1,0 +1,193 @@
+{
+  "subsidiarity": [
+    {
+      "id": "public-choice-theory",
+      "title": "Public Choice Theory",
+      "url": "/economics/public-choice-theory.html",
+      "category": "Economics",
+      "type": "is supports"
+    },
+    {
+      "id": "ostrom-polycentric-governance",
+      "title": "Ostrom's Polycentric Governance",
+      "url": "/society/ostrom-polycentric-governance.html",
+      "category": "Society",
+      "type": "is example of"
+    },
+    {
+      "id": "goodharts-law",
+      "title": "Goodhart's Law",
+      "url": "/policy/goodharts-law.html",
+      "category": "Policy",
+      "type": "mentions this"
+    }
+  ],
+  "goodharts-law": [
+    {
+      "id": "regulatory-capture",
+      "title": "Regulatory Capture",
+      "url": "/policy/regulatory-capture.html",
+      "category": "Policy",
+      "type": "is measures"
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "url": "/economics/pigouvian-tax.html",
+      "category": "Economics",
+      "type": "is prerequisite for"
+    }
+  ],
+  "regulatory-capture": [
+    {
+      "id": "goodharts-law",
+      "title": "Goodhart's Law",
+      "url": "/policy/goodharts-law.html",
+      "category": "Policy",
+      "type": "is measures"
+    },
+    {
+      "id": "coase-theorem",
+      "title": "Coase Theorem",
+      "url": "/economics/coase-theorem.html",
+      "category": "Economics",
+      "type": "is related to"
+    },
+    {
+      "id": "public-choice-theory",
+      "title": "Public Choice Theory",
+      "url": "/economics/public-choice-theory.html",
+      "category": "Economics",
+      "type": "is prerequisite for"
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "url": "/economics/pigouvian-tax.html",
+      "category": "Economics",
+      "type": "mentions this"
+    }
+  ],
+  "coase-theorem": [
+    {
+      "id": "regulatory-capture",
+      "title": "Regulatory Capture",
+      "url": "/policy/regulatory-capture.html",
+      "category": "Policy",
+      "type": "is related to"
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "url": "/economics/pigouvian-tax.html",
+      "category": "Economics",
+      "type": "is contrasts with"
+    },
+    {
+      "id": "public-choice-theory",
+      "title": "Public Choice Theory",
+      "url": "/economics/public-choice-theory.html",
+      "category": "Economics",
+      "type": "is related to"
+    },
+    {
+      "id": "ostrom-polycentric-governance",
+      "title": "Ostrom's Polycentric Governance",
+      "url": "/society/ostrom-polycentric-governance.html",
+      "category": "Society",
+      "type": "is contrasts with"
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "title": "Tragedy of the Commons",
+      "url": "/society/tragedy-of-the-commons.html",
+      "category": "Society",
+      "type": "is contrasts with"
+    }
+  ],
+  "pigouvian-tax": [
+    {
+      "id": "goodharts-law",
+      "title": "Goodhart's Law",
+      "url": "/policy/goodharts-law.html",
+      "category": "Policy",
+      "type": "is prerequisite for"
+    },
+    {
+      "id": "coase-theorem",
+      "title": "Coase Theorem",
+      "url": "/economics/coase-theorem.html",
+      "category": "Economics",
+      "type": "is contrasts with"
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "title": "Tragedy of the Commons",
+      "url": "/society/tragedy-of-the-commons.html",
+      "category": "Society",
+      "type": "is measures"
+    }
+  ],
+  "public-choice-theory": [
+    {
+      "id": "subsidiarity",
+      "title": "Subsidiarity",
+      "url": "/law/subsidiarity.html",
+      "category": "Law",
+      "type": "is supports"
+    },
+    {
+      "id": "regulatory-capture",
+      "title": "Regulatory Capture",
+      "url": "/policy/regulatory-capture.html",
+      "category": "Policy",
+      "type": "is example of"
+    }
+  ],
+  "ostrom-polycentric-governance": [
+    {
+      "id": "subsidiarity",
+      "title": "Subsidiarity",
+      "url": "/law/subsidiarity.html",
+      "category": "Law",
+      "type": "is prerequisite for"
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "title": "Tragedy of the Commons",
+      "url": "/society/tragedy-of-the-commons.html",
+      "category": "Society",
+      "type": "is contrasts with"
+    },
+    {
+      "id": "coase-theorem",
+      "title": "Coase Theorem",
+      "url": "/economics/coase-theorem.html",
+      "category": "Economics",
+      "type": "mentions this"
+    }
+  ],
+  "tragedy-of-the-commons": [
+    {
+      "id": "coase-theorem",
+      "title": "Coase Theorem",
+      "url": "/economics/coase-theorem.html",
+      "category": "Economics",
+      "type": "is solution for"
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "url": "/economics/pigouvian-tax.html",
+      "category": "Economics",
+      "type": "is solution for"
+    },
+    {
+      "id": "ostrom-polycentric-governance",
+      "title": "Ostrom's Polycentric Governance",
+      "url": "/society/ostrom-polycentric-governance.html",
+      "category": "Society",
+      "type": "is contrasts with"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+---
+title: "Frameworks for Policy, Law & Society"
+subtitle: "Mental models, institutional designs, and economic principles for navigating public problems."
+page-layout: full
+---
+
+```{=html}
+<!-- D3.js for Graph Engine -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="assets/frameworks-app.js"></script>
+
+<div class="hero-container">
+  <h1 class="hero-title">Frameworks for Policy, Law & Society</h1>
+  <p class="hero-subtitle">
+    A curated knowledge repository of conceptual models, legal principles, and institutional dynamics. Explore through wikilinks or interactive knowledge graphs.
+  </p>
+
+  <!-- Find a Framework Search Bar -->
+  <div class="search-box-wrapper">
+    <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    </svg>
+    <input 
+      type="text" 
+      id="framework-search" 
+      class="framework-search-input" 
+      placeholder="Describe a problem or search a framework (e.g., 'externalities', 'governance', 'subsidiarity')..." 
+      autocomplete="off"
+    />
+    <div id="search-stats" style="margin-top: 0.5rem; font-size: 0.85rem; color: #64748b;"></div>
+  </div>
+
+  <!-- View Switcher Toggle -->
+  <div class="view-toggle-container">
+    <div class="view-toggle">
+      <button id="toggle-view-list" class="toggle-btn active">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+        List View
+      </button>
+      <button id="toggle-view-graph" class="toggle-btn">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
+        Graph View
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 1. GRAPH VIEW CONTAINER                      -->
+<!-- ============================================ -->
+<div id="main-graph-view" style="display: none; max-width: 1100px; margin: 0 auto 3rem auto;">
+  <div class="graph-viewport-container">
+    <div class="graph-controls">
+      <span style="font-weight: 600; color: #475569;">Interactive Force Graph</span>
+      <span style="font-size: 0.8rem; color: #94a3b8;">Click node to inspect | Double click to open</span>
+    </div>
+    <div id="main-graph-canvas" style="width: 100%; height: 580px;"></div>
+  </div>
+  
+  <!-- Category Legend -->
+  <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; font-size: 0.85rem; color: #475569;">
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444; display: inline-block;"></span> Law
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; display: inline-block;"></span> Policy
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; display: inline-block;"></span> Economics
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #8b5cf6; display: inline-block;"></span> Society
+    </span>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 2. LIST VIEW CONTAINER                       -->
+<!-- ============================================ -->
+<div id="main-list-view" style="max-width: 1100px; margin: 0 auto;">
+
+  <!-- START HERE ROW (3 FEATURED CARDS) -->
+  <h2 class="section-heading">
+    <span>🌟 Start Here</span>
+  </h2>
+  <div class="start-here-grid">
+    <a href="economics/coase-theorem.html" class="framework-card">
+      <span class="card-category-badge badge-economics">Economics & Law</span>
+      <h3 class="card-title">Coase Theorem</h3>
+      <p class="card-summary">When transaction costs are negligible and property rights clear, private bargaining resolves externalities without government intervention.</p>
+    </a>
+
+    <a href="economics/pigouvian-tax.html" class="framework-card">
+      <span class="card-category-badge badge-policy">Policy & Economics</span>
+      <h3 class="card-title">Pigouvian Tax</h3>
+      <p class="card-summary">Calibrating excise taxes to match marginal external damage, aligning private market prices with full social costs.</p>
+    </a>
+
+    <a href="society/tragedy-of-the-commons.html" class="framework-card">
+      <span class="card-category-badge badge-society">Society & Economics</span>
+      <h3 class="card-title">Tragedy of the Commons</h3>
+      <p class="card-summary">Individual rational exploitation depleting finite shared resources, and alternative pathways to sustainable governance.</p>
+    </a>
+  </div>
+
+  <!-- CATEGORY CARDS GRID -->
+  <h2 class="section-heading">
+    <span>📚 Explore by Category</span>
+  </h2>
+  <div class="category-overview-grid">
+    <a href="law/index.html" class="category-card">
+      <div class="category-icon">⚖️</div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem;">Law</h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Constitutional doctrines, jurisdiction, rights, and regulatory statutes.</p>
+    </a>
+
+    <a href="policy/index.html" class="category-card">
+      <div class="category-icon">📋</div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem;">Policy</h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Institutional mechanics, metrics gaming, and decision frameworks.</p>
+    </a>
+
+    <a href="economics/index.html" class="category-card">
+      <div class="category-icon">📈</div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem;">Economics</h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Incentive structures, externalities, public choice, and market friction.</p>
+    </a>
+
+    <a href="society/index.html" class="category-card">
+      <div class="category-icon">🌐</div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem;">Society</h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Collective action problems, polycentric governance, and commons.</p>
+    </a>
+  </div>
+
+  <!-- ALL FRAMEWORKS SEARCHABLE LISTING -->
+  <h2 class="section-heading">
+    <span>🧭 All Frameworks</span>
+  </h2>
+  <div class="start-here-grid" id="all-frameworks-grid">
+    <a href="economics/coase-theorem.html" class="framework-card">
+      <span class="card-category-badge badge-economics">Economics</span>
+      <h3 class="card-title">Coase Theorem</h3>
+      <p class="card-summary">When property rights are well-defined and transaction costs zero, private bargaining achieves efficient resource allocation.</p>
+    </a>
+
+    <a href="economics/pigouvian-tax.html" class="framework-card">
+      <span class="card-category-badge badge-economics">Economics</span>
+      <h3 class="card-title">Pigouvian Tax</h3>
+      <p class="card-summary">An excise tax imposed on activities generating negative externalities, equal to marginal external cost.</p>
+    </a>
+
+    <a href="economics/public-choice-theory.html" class="framework-card">
+      <span class="card-category-badge badge-economics">Economics</span>
+      <h3 class="card-title">Public Choice Theory</h3>
+      <p class="card-summary">Application of microeconomic models to political decision-making, rejecting the assumption of benevolent bureaucrats.</p>
+    </a>
+
+    <a href="society/tragedy-of-the-commons.html" class="framework-card">
+      <span class="card-category-badge badge-society">Society</span>
+      <h3 class="card-title">Tragedy of the Commons</h3>
+      <p class="card-summary">Individual rational exploitation leading to systematic exhaustion of open-access, finite shared resources.</p>
+    </a>
+
+    <a href="society/ostrom-polycentric-governance.html" class="framework-card">
+      <span class="card-category-badge badge-society">Society</span>
+      <h3 class="card-title">Ostrom's Polycentric Governance</h3>
+      <p class="card-summary">Complex community institutions successfully governing shared commons without central command or privatization.</p>
+    </a>
+
+    <a href="policy/regulatory-capture.html" class="framework-card">
+      <span class="card-category-badge badge-policy">Policy</span>
+      <h3 class="card-title">Regulatory Capture</h3>
+      <p class="card-summary">Government regulatory agencies coming under the dominance of the commercial interests they were designed to regulate.</p>
+    </a>
+
+    <a href="policy/goodharts-law.html" class="framework-card">
+      <span class="card-category-badge badge-policy">Policy</span>
+      <h3 class="card-title">Goodhart's Law</h3>
+      <p class="card-summary">When a measure becomes a target, it ceases to be a good measure as actors game the metric.</p>
+    </a>
+
+    <a href="law/subsidiarity.html" class="framework-card">
+      <span class="card-category-badge badge-law">Law</span>
+      <h3 class="card-title">Subsidiarity</h3>
+      <p class="card-summary">Principle that social and political problems should be resolved by the most immediate and localized authority feasible.</p>
+    </a>
+  </div>
+
+</div>
+```

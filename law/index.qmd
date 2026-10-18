@@ -1,0 +1,11 @@
+---
+title: "Law Frameworks"
+subtitle: "Constitutional rules, jurisdiction, rights, and regulatory jurisprudence."
+listing:
+  contents: "*.qmd"
+  type: default
+  fields: [title, categories, summary]
+  sort: "title"
+---
+
+Welcome to the Law collection. Explore legal structures, rights delineation, and jurisdictional models that govern institutional interactions.

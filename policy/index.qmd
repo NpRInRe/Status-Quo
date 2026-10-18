@@ -1,0 +1,11 @@
+---
+title: "Policy Frameworks"
+subtitle: "Decision-making tools, governance models, regulatory incentives, and metrics."
+listing:
+  contents: "*.qmd"
+  type: default
+  fields: [title, categories, summary]
+  sort: "title"
+---
+
+Welcome to the Policy collection. These frameworks examine how public policy interventions are conceived, evaluated, gamed, and administered.

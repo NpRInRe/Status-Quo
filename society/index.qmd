@@ -1,0 +1,11 @@
+---
+title: "Society Frameworks"
+subtitle: "Collective action, commons, community governance, and societal dynamics."
+listing:
+  contents: "*.qmd"
+  type: default
+  fields: [title, categories, summary]
+  sort: "title"
+---
+
+Welcome to the Society collection. Investigate human coordination challenges, shared common-pool resources, and decentralized community self-organization.

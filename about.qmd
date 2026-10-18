@@ -1,0 +1,29 @@
+---
+title: "About the Frameworks Repository"
+subtitle: "An open, interconnected knowledge graph for public policy, law, economics, and society."
+---
+
+## Philosophy & Architecture
+
+This repository is modeled after modern digital gardens and networked knowledge bases (such as [Frameworks for Public Policy](https://frameworks.pranaykotas.com/) and Obsidian knowledge graphs).
+
+Rather than siloing concepts into linear chapters or static encyclopedic entries, each framework is treated as a **node** in an evolving relational graph.
+
+### 1. Dual Views: Wikilinks & Graph
+
+- **List / Reader View:** Presents clean, long-form analytical prose with Wikipedia-style `[[wikilinks]]`, an automatically updated list of **Backlinks** (wherever another framework cites this entry), and **Typed Relations** categorized by function.
+- **Graph View:** A dynamic, force-directed topological map showing cluster formations, cross-disciplinary bridges, and structural hubs. Click on any node to view its local neighborhood (1–2 hops) or inspect its thesis.
+
+### 2. Typed Relations Ontology
+
+Relations between frameworks are explicitly typed in frontmatter:
+- **`contrasts with`**: Highlights fundamental theoretical disputes (e.g., [[coase-theorem]] vs. [[pigouvian-tax]]).
+- **`solution for`**: Demonstrates institutional mechanisms addressing systemic failures (e.g., [[pigouvian-tax]] for [[tragedy-of-the-commons]]).
+- **`prerequisite for`**: Identifies foundational axioms required to understand a downstream phenomenon.
+- **`example of` / `supports`**: Illustrates concrete empirical or legal manifestations of abstract theorems.
+
+### 3. Open Stack & Zero-Cost Hosting
+
+- **Quarto Static Engine:** High-performance, reproducible static site generator.
+- **Automated Pre-rendering:** Python build pipeline parsing frontmatter and wikilinks into structured `graph.json` and `backlinks.json`.
+- **Zero Cost:** Hosted completely for free on **GitHub Pages** or **Cloudflare Pages** with automated continuous deployment.

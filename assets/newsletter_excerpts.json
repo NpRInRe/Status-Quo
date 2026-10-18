@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Pricing the Air We Breathe",
+    "author": "Policy Dispatch",
+    "date": "2026-03-15",
+    "url": "https://substack.com",
+    "excerpt": "When market externalities spill over into communal waterways and atmospheric sinks, Pigouvian carbon taxes offer a dynamic incentive structure that command regulations fail to match.",
+    "matched_frameworks": [
+      "pigouvian-tax",
+      "coase-theorem",
+      "tragedy-of-the-commons"
+    ]
+  },
+  {
+    "title": "The Ostrom Alternative to the Leviathan",
+    "author": "Institutional Review",
+    "date": "2026-02-01",
+    "url": "https://substack.com",
+    "excerpt": "Instead of ceding control to centralized ministries or auctioning off shared pasturelands to corporations, community governance demonstrates that local institutional design overcomes the tragedy of the commons.",
+    "matched_frameworks": [
+      "ostrom-polycentric-governance",
+      "tragedy-of-the-commons",
+      "subsidiarity"
+    ]
+  }
+]

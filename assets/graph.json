@@ -1,0 +1,368 @@
+{
+  "nodes": [
+    {
+      "id": "subsidiarity",
+      "title": "Subsidiarity",
+      "category": "Law",
+      "categories": [
+        "Law",
+        "Policy"
+      ],
+      "summary": "A principle of social and constitutional organization holding that social and political issues ought to be dealt with at the most immediate (or local) level that is consistent with their resolution.",
+      "url": "/law/subsidiarity.html",
+      "start_here": false,
+      "degree": 9
+    },
+    {
+      "id": "goodharts-law",
+      "title": "Goodhart's Law",
+      "category": "Policy",
+      "categories": [
+        "Policy",
+        "Society"
+      ],
+      "summary": "When a measure becomes a target, it ceases to be a good measure\u2014actors optimize specifically for the metric rather than the underlying objective.",
+      "url": "/policy/goodharts-law.html",
+      "start_here": false,
+      "degree": 8
+    },
+    {
+      "id": "regulatory-capture",
+      "title": "Regulatory Capture",
+      "category": "Policy",
+      "categories": [
+        "Policy",
+        "Law"
+      ],
+      "summary": "A systemic failure wherein a government regulatory agency created to act in the public interest becomes dominated and guided by the commercial or special interests of the industry it regulates.",
+      "url": "/policy/regulatory-capture.html",
+      "start_here": false,
+      "degree": 11
+    },
+    {
+      "id": "coase-theorem",
+      "title": "Coase Theorem",
+      "category": "Economics",
+      "categories": [
+        "Economics",
+        "Law"
+      ],
+      "summary": "When property rights are well-defined and transaction costs are zero, private bargaining achieves an efficient allocation of resources regardless of the initial assignment of rights.",
+      "url": "/economics/coase-theorem.html",
+      "start_here": true,
+      "degree": 13
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "category": "Economics",
+      "categories": [
+        "Economics",
+        "Policy"
+      ],
+      "summary": "An excise tax imposed on an activity generating negative externalities, calibrated exactly to equal the marginal external cost to align private incentives with social welfare.",
+      "url": "/economics/pigouvian-tax.html",
+      "start_here": true,
+      "degree": 13
+    },
+    {
+      "id": "public-choice-theory",
+      "title": "Public Choice Theory",
+      "category": "Economics",
+      "categories": [
+        "Economics",
+        "Policy"
+      ],
+      "summary": "The application of microeconomic tools to political science, rejecting the benevolent dictator assumption and positing that politicians, bureaucrats, and voters act in their rational self-interest.",
+      "url": "/economics/public-choice-theory.html",
+      "start_here": false,
+      "degree": 9
+    },
+    {
+      "id": "ostrom-polycentric-governance",
+      "title": "Ostrom's Polycentric Governance",
+      "category": "Society",
+      "categories": [
+        "Society",
+        "Policy"
+      ],
+      "summary": "A governance system with multiple governing bodies at varying scales that operate independently yet coordinate, enabling robust community management of common-pool resources.",
+      "url": "/society/ostrom-polycentric-governance.html",
+      "start_here": false,
+      "degree": 10
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "title": "Tragedy of the Commons",
+      "category": "Society",
+      "categories": [
+        "Society",
+        "Economics"
+      ],
+      "summary": "An economic problem where individual users with open access to a finite, rivalrous resource act independently according to self-interest, collectively depleting the resource to the detriment of all.",
+      "url": "/society/tragedy-of-the-commons.html",
+      "start_here": true,
+      "degree": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "subsidiarity",
+      "target": "ostrom-polycentric-governance",
+      "type": "prerequisite for",
+      "label": "prerequisite for"
+    },
+    {
+      "source": "subsidiarity",
+      "target": "public-choice-theory",
+      "type": "supports",
+      "label": "supports"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "pigouvian-tax",
+      "type": "prerequisite for",
+      "label": "prerequisite for"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "regulatory-capture",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "public-choice-theory",
+      "type": "example of",
+      "label": "example of"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "coase-theorem",
+      "type": "related to",
+      "label": "related to"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "goodharts-law",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "pigouvian-tax",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "regulatory-capture",
+      "type": "related to",
+      "label": "related to"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "tragedy-of-the-commons",
+      "type": "solution for",
+      "label": "solution for"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "coase-theorem",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "tragedy-of-the-commons",
+      "type": "solution for",
+      "label": "solution for"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "goodharts-law",
+      "type": "prerequisite for",
+      "label": "prerequisite for"
+    },
+    {
+      "source": "public-choice-theory",
+      "target": "regulatory-capture",
+      "type": "prerequisite for",
+      "label": "prerequisite for"
+    },
+    {
+      "source": "public-choice-theory",
+      "target": "subsidiarity",
+      "type": "supports",
+      "label": "supports"
+    },
+    {
+      "source": "public-choice-theory",
+      "target": "coase-theorem",
+      "type": "related to",
+      "label": "related to"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "tragedy-of-the-commons",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "subsidiarity",
+      "type": "example of",
+      "label": "example of"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "coase-theorem",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "ostrom-polycentric-governance",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "pigouvian-tax",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "coase-theorem",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "subsidiarity",
+      "target": "ostrom-polycentric-governance",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "subsidiarity",
+      "target": "public-choice-theory",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "pigouvian-tax",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "public-choice-theory",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "goodharts-law",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "pigouvian-tax",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "regulatory-capture",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "coase-theorem",
+      "target": "ostrom-polycentric-governance",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "goodharts-law",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "coase-theorem",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "regulatory-capture",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "pigouvian-tax",
+      "target": "tragedy-of-the-commons",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "public-choice-theory",
+      "target": "regulatory-capture",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "public-choice-theory",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "tragedy-of-the-commons",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "coase-theorem",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "ostrom-polycentric-governance",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "tragedy-of-the-commons",
+      "target": "pigouvian-tax",
+      "type": "references",
+      "label": "mentions"
+    }
+  ],
+  "categories": [
+    "Law",
+    "Policy",
+    "Economics",
+    "Society"
+  ]
+}
