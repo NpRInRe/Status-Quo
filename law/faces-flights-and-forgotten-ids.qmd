@@ -1,0 +1,76 @@
+---
+id: faces-flights-and-forgotten-ids
+title: "Of Faces, Flights and Forgotten IDs"
+categories: ["Law", "Society"]
+date: "2026-05-30"
+author: "Neeraj Paulose Raj"
+summary: "On eleven years, a facial scan, and the privacy we may have given away without noticing."
+start_here: true
+related:
+  - id: privacy-paradox
+    type: "explores"
+  - id: goodharts-law
+    type: "critique of"
+  - id: subsidiarity
+    type: "contrasts with"
+  - id: regulatory-capture
+    type: "measures"
+---
+
+I remember the very first time I came to Delhi from Cochin. Perhaps it was also the very first time I ever boarded a flight. You would be right to wonder what there is to write about that, and for that, I will want to borrow your patience while I take you through many tangents to explain why.
+
+I often see myself as someone who is barely from a middle-class background, an ambitious boy from a remote village (ambitious I still am, boy no more I'm); however, I had the privilege of growing up with a decent education in a community filled with harmony. Even then, my relationship with life’s luxuries was always conditional and nothing short of a rarity. So the very first flight, and that too to the capital city, was one etched in memory.
+
+That day, in the hurriedness of it all, I even forgot to check what documents you need to show at the entry gate. It was right when I saw the men in uniform at the airport that it hit me to ask. I rang a friend, someone I could reliably count on for travel know-how: *"Just an ID card and obviously the printout,"* she said. Mind you, this was neither the time when Jio launched its internet democratisation, nor when the smartphone revolution overpowered the Indian market. This, my friend, was the time of Aircel and DoCoMo, when BSNL was still the largest telecom provider, and Airtel ruled the roost. Every doubt you had, lived either in someone else’s head, or more so in a book, but sure not entirely on Google, and certainly not a click away.
+
+Fast forward eleven years. I have had the privilege of visiting Delhi more than half a dozen times since. The Janpath Gol Chowk, which left me confused during that first visit with what could barely be called Google Maps back then, has become part of my journey. Patiala House, which I once struggled to find, has become an indivisible part of my daily commute. (In my defence, navigating maps has never been my strongest suit. But between the growing number of white hairs and a shrinking margin of error, I am at least content with being less prone to erring now ;) )
+
+Which brings me to what I am actually trying to say.
+
+The answer is **Data**. Specifically, **DigiYatra**.
+
+As I scribble this piece over my journey back to a friend’s apartment, I do not know if it is the overpriced caffeine from the airport outlet doing its work or something eerier sitting deeper inside, but something propelled me to ponder about what just happened when I walked past the airport gates through a DigiYatra facial scan, completely hassle-free. That moment gave me an annoying itch to pontificate about the evolution of data and how the internet has reshaped our understanding of privacy in ways we barely notice until they are already upon us.
+
+The ID I handed to the men in uniform back then was my Aadhaar. I still remember the curious stare from the officer who asked, *"Is this really you?"* Like every Indian, I had the classic reply ready: *"Sir, Aadhaar photo no,"* said with a smile and a backup ID just to clear the air. Fast forward to my "Nth" flight out of Delhi. The men in uniform were still behind the gates. But there were no questions. Just me and a camera. A facial scan, a brief pause, and I was through. I waited a few seconds, half expecting someone to ask for my ticket. Nobody did. I walked in feeling quietly confused.
+
+The internal monologue that has stayed with me since is this: **how has my understanding of privacy changed?** Why did that facial scan feel strange when I had handed over that Aadhaar card without a second thought eleven years ago? Were my neurons firing some message about a shift in agency? Back then, it was a man in uniform I could see, look at, and speak to. Now it is an unknown algorithm on a distant server I will never see, one that reads my face, something as unique to me as a strand of DNA, and waves me through.
+
+Somewhere in that silence between the question and its disappearance lies everything I intend to find out: how the law has scrambled to keep up, how a largely internet-illiterate country quietly surrendered what it never knew it had, what convenience has cost us in ways we are only beginning to count, and perhaps much else that I have not yet thought to ask.
+
+---
+
+### Conceptual Intersections
+
+- **The Behavioral Friction Trap:** Demonstrates [[privacy-paradox]] where frictionless authentication encourages citizens to trade irreversible biometric templates for marginal seconds of queue time.
+- **Metric-Driven Administration:** Airport passenger throughput goals create high organizational pressure to enforce biometric adoption, exemplifying [[goodharts-law]].
+- **Infrastructure Centralization:** Centralized biometric identity stores contrast with the federal and localized principles of [[subsidiarity]], exposing institutional vulnerabilities to [[regulatory-capture]].
+
+
+<!-- AUTOGENERATED_RELATIONS_START -->
+## Connected Ideas & Mentions
+
+::: {.local-graph-box}
+<div class="local-graph-header">
+  <span><strong>Of Faces, Flights and Forgotten IDs</strong> in Network (1-2 Hops)</span>
+  <button id="btn-toggle-hops" class="btn btn-sm btn-outline-primary">1 Hop</button>
+</div>
+<div id="local-graph-canvas" class="local-graph-canvas" data-node-id="faces-flights-and-forgotten-ids"></div>
+:::
+
+::: {.relations-container}
+### Connected Concepts
+
+**Explores:**
+- [The Privacy Paradox & Digital Identity](/law/privacy-paradox.html) — *The systemic dichotomy where citizens voice deep abstract concerns regarding personal data sovereignty yet consistently surrender biometric and behavioral entitlements in exchange for marginal transaction convenience.*
+
+**Critique of:**
+- [Goodhart's Law](/society/goodharts-law.html) — *When a measure becomes a target, it ceases to be a good measure—actors optimize specifically for the metric rather than the underlying objective.*
+
+**Contrasts with:**
+- [Subsidiarity](/law/subsidiarity.html) — *A principle of social and constitutional organization holding that social and political issues ought to be dealt with at the most immediate (or local) level that is consistent with their resolution.*
+
+**Measures:**
+- [Regulatory Capture](/society/regulatory-capture.html) — *A systemic failure wherein a government regulatory agency created to act in the public interest becomes dominated and guided by the commercial or special interests of the industry it regulates.*
+
+:::
+<!-- AUTOGENERATED_RELATIONS_END -->

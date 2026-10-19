@@ -4,9 +4,9 @@ project:
   pre-render: scripts/build_graph.py
 
 website:
-  title: "Frameworks for Policy, Law & Society"
-  description: "A curated knowledge graph of conceptual frameworks across law, policy, economics, and society."
-  site-url: "https://yourusername.github.io/policy-frameworks"
+  title: "Status Quo"
+  description: "Society’s existing states of affairs in law, policy, politics, and culture. An interconnected blog by Neeraj Paulose Raj."
+  site-url: "https://statusquotoday.substack.com"
   navbar:
     background: "#0f172a"
     foreground: "#f8fafc"
@@ -17,17 +17,13 @@ website:
         href: graph.qmd
       - text: "Law"
         href: law/index.qmd
-      - text: "Policy"
-        href: policy/index.qmd
-      - text: "Economics"
-        href: economics/index.qmd
       - text: "Society"
         href: society/index.qmd
     right:
       - text: "About"
         href: about.qmd
-      - icon: github
-        href: https://github.com
+      - text: "Substack ↗"
+        href: https://statusquotoday.substack.com
 
 format:
   html:

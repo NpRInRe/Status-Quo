@@ -1,6 +1,21 @@
 {
   "nodes": [
     {
+      "id": "faces-flights-and-forgotten-ids",
+      "title": "Of Faces, Flights and Forgotten IDs",
+      "category": "Law",
+      "categories": [
+        "Law",
+        "Society"
+      ],
+      "summary": "On eleven years, a facial scan, and the privacy we may have given away without noticing.",
+      "author": "Neeraj Paulose Raj",
+      "date": "2026-05-30",
+      "url": "/law/faces-flights-and-forgotten-ids.html",
+      "start_here": true,
+      "degree": 8
+    },
+    {
       "id": "privacy-paradox",
       "title": "The Privacy Paradox & Digital Identity",
       "category": "Law",
@@ -10,9 +25,11 @@
         "Society"
       ],
       "summary": "The systemic dichotomy where citizens voice deep abstract concerns regarding personal data sovereignty yet consistently surrender biometric and behavioral entitlements in exchange for marginal transaction convenience.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
       "url": "/law/privacy-paradox.html",
       "start_here": true,
-      "degree": 6
+      "degree": 8
     },
     {
       "id": "subsidiarity",
@@ -23,74 +40,42 @@
         "Policy"
       ],
       "summary": "A principle of social and constitutional organization holding that social and political issues ought to be dealt with at the most immediate (or local) level that is consistent with their resolution.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
       "url": "/law/subsidiarity.html",
-      "start_here": false,
-      "degree": 11
-    },
-    {
-      "id": "goodharts-law",
-      "title": "Goodhart's Law",
-      "category": "Policy",
-      "categories": [
-        "Policy",
-        "Society"
-      ],
-      "summary": "When a measure becomes a target, it ceases to be a good measure\u2014actors optimize specifically for the metric rather than the underlying objective.",
-      "url": "/policy/goodharts-law.html",
-      "start_here": false,
-      "degree": 10
-    },
-    {
-      "id": "regulatory-capture",
-      "title": "Regulatory Capture",
-      "category": "Policy",
-      "categories": [
-        "Policy",
-        "Law"
-      ],
-      "summary": "A systemic failure wherein a government regulatory agency created to act in the public interest becomes dominated and guided by the commercial or special interests of the industry it regulates.",
-      "url": "/policy/regulatory-capture.html",
       "start_here": false,
       "degree": 13
     },
     {
       "id": "coase-theorem",
       "title": "Coase Theorem",
-      "category": "Economics",
+      "category": "Society",
       "categories": [
+        "Society",
         "Economics",
         "Law"
       ],
       "summary": "When property rights are well-defined and transaction costs are zero, private bargaining achieves an efficient allocation of resources regardless of the initial assignment of rights.",
-      "url": "/economics/coase-theorem.html",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
+      "url": "/society/coase-theorem.html",
       "start_here": true,
       "degree": 13
     },
     {
-      "id": "pigouvian-tax",
-      "title": "Pigouvian Tax",
-      "category": "Economics",
+      "id": "goodharts-law",
+      "title": "Goodhart's Law",
+      "category": "Society",
       "categories": [
-        "Economics",
+        "Society",
         "Policy"
       ],
-      "summary": "An excise tax imposed on an activity generating negative externalities, calibrated exactly to equal the marginal external cost to align private incentives with social welfare.",
-      "url": "/economics/pigouvian-tax.html",
-      "start_here": true,
-      "degree": 13
-    },
-    {
-      "id": "public-choice-theory",
-      "title": "Public Choice Theory",
-      "category": "Economics",
-      "categories": [
-        "Economics",
-        "Policy"
-      ],
-      "summary": "The application of microeconomic tools to political science, rejecting the benevolent dictator assumption and positing that politicians, bureaucrats, and voters act in their rational self-interest.",
-      "url": "/economics/public-choice-theory.html",
+      "summary": "When a measure becomes a target, it ceases to be a good measure\u2014actors optimize specifically for the metric rather than the underlying objective.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
+      "url": "/society/goodharts-law.html",
       "start_here": false,
-      "degree": 9
+      "degree": 12
     },
     {
       "id": "ostrom-polycentric-governance",
@@ -101,9 +86,59 @@
         "Policy"
       ],
       "summary": "A governance system with multiple governing bodies at varying scales that operate independently yet coordinate, enabling robust community management of common-pool resources.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
       "url": "/society/ostrom-polycentric-governance.html",
       "start_here": false,
       "degree": 10
+    },
+    {
+      "id": "pigouvian-tax",
+      "title": "Pigouvian Tax",
+      "category": "Society",
+      "categories": [
+        "Society",
+        "Economics",
+        "Policy"
+      ],
+      "summary": "An excise tax imposed on an activity generating negative externalities, calibrated exactly to equal the marginal external cost to align private incentives with social welfare.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
+      "url": "/society/pigouvian-tax.html",
+      "start_here": true,
+      "degree": 13
+    },
+    {
+      "id": "public-choice-theory",
+      "title": "Public Choice Theory",
+      "category": "Society",
+      "categories": [
+        "Society",
+        "Economics",
+        "Policy"
+      ],
+      "summary": "The application of microeconomic tools to political science, rejecting the benevolent dictator assumption and positing that politicians, bureaucrats, and voters act in their rational self-interest.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
+      "url": "/society/public-choice-theory.html",
+      "start_here": false,
+      "degree": 9
+    },
+    {
+      "id": "regulatory-capture",
+      "title": "Regulatory Capture",
+      "category": "Society",
+      "categories": [
+        "Society",
+        "Policy",
+        "Law"
+      ],
+      "summary": "A systemic failure wherein a government regulatory agency created to act in the public interest becomes dominated and guided by the commercial or special interests of the industry it regulates.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
+      "url": "/society/regulatory-capture.html",
+      "start_here": false,
+      "degree": 15
     },
     {
       "id": "tragedy-of-the-commons",
@@ -114,6 +149,8 @@
         "Economics"
       ],
       "summary": "An economic problem where individual users with open access to a finite, rivalrous resource act independently according to self-interest, collectively depleting the resource to the detriment of all.",
+      "author": "Neeraj Paulose Raj",
+      "date": "",
       "url": "/society/tragedy-of-the-commons.html",
       "start_here": true,
       "degree": 11
@@ -121,6 +158,30 @@
   ],
   "edges": [
     {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "privacy-paradox",
+      "type": "explores",
+      "label": "explores"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "goodharts-law",
+      "type": "critique of",
+      "label": "critique of"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "subsidiarity",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "regulatory-capture",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
       "source": "privacy-paradox",
       "target": "regulatory-capture",
       "type": "related to",
@@ -151,36 +212,6 @@
       "label": "supports"
     },
     {
-      "source": "goodharts-law",
-      "target": "pigouvian-tax",
-      "type": "prerequisite for",
-      "label": "prerequisite for"
-    },
-    {
-      "source": "goodharts-law",
-      "target": "regulatory-capture",
-      "type": "measures",
-      "label": "measures"
-    },
-    {
-      "source": "regulatory-capture",
-      "target": "public-choice-theory",
-      "type": "example of",
-      "label": "example of"
-    },
-    {
-      "source": "regulatory-capture",
-      "target": "coase-theorem",
-      "type": "related to",
-      "label": "related to"
-    },
-    {
-      "source": "regulatory-capture",
-      "target": "goodharts-law",
-      "type": "measures",
-      "label": "measures"
-    },
-    {
       "source": "coase-theorem",
       "target": "pigouvian-tax",
       "type": "contrasts with",
@@ -197,6 +228,36 @@
       "target": "tragedy-of-the-commons",
       "type": "solution for",
       "label": "solution for"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "pigouvian-tax",
+      "type": "prerequisite for",
+      "label": "prerequisite for"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "regulatory-capture",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "tragedy-of-the-commons",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "subsidiarity",
+      "type": "example of",
+      "label": "example of"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "coase-theorem",
+      "type": "contrasts with",
+      "label": "contrasts with"
     },
     {
       "source": "pigouvian-tax",
@@ -235,22 +296,22 @@
       "label": "related to"
     },
     {
-      "source": "ostrom-polycentric-governance",
-      "target": "tragedy-of-the-commons",
-      "type": "contrasts with",
-      "label": "contrasts with"
-    },
-    {
-      "source": "ostrom-polycentric-governance",
-      "target": "subsidiarity",
+      "source": "regulatory-capture",
+      "target": "public-choice-theory",
       "type": "example of",
       "label": "example of"
     },
     {
-      "source": "ostrom-polycentric-governance",
+      "source": "regulatory-capture",
       "target": "coase-theorem",
-      "type": "contrasts with",
-      "label": "contrasts with"
+      "type": "related to",
+      "label": "related to"
+    },
+    {
+      "source": "regulatory-capture",
+      "target": "goodharts-law",
+      "type": "measures",
+      "label": "measures"
     },
     {
       "source": "tragedy-of-the-commons",
@@ -271,6 +332,30 @@
       "label": "contrasts with"
     },
     {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "privacy-paradox",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "goodharts-law",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "faces-flights-and-forgotten-ids",
+      "target": "regulatory-capture",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
       "source": "privacy-paradox",
       "target": "goodharts-law",
       "type": "references",
@@ -301,30 +386,6 @@
       "label": "mentions"
     },
     {
-      "source": "goodharts-law",
-      "target": "pigouvian-tax",
-      "type": "references",
-      "label": "mentions"
-    },
-    {
-      "source": "goodharts-law",
-      "target": "subsidiarity",
-      "type": "references",
-      "label": "mentions"
-    },
-    {
-      "source": "regulatory-capture",
-      "target": "public-choice-theory",
-      "type": "references",
-      "label": "mentions"
-    },
-    {
-      "source": "regulatory-capture",
-      "target": "goodharts-law",
-      "type": "references",
-      "label": "mentions"
-    },
-    {
       "source": "coase-theorem",
       "target": "pigouvian-tax",
       "type": "references",
@@ -339,6 +400,30 @@
     {
       "source": "coase-theorem",
       "target": "ostrom-polycentric-governance",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "pigouvian-tax",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "goodharts-law",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "tragedy-of-the-commons",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "ostrom-polycentric-governance",
+      "target": "subsidiarity",
       "type": "references",
       "label": "mentions"
     },
@@ -379,14 +464,14 @@
       "label": "mentions"
     },
     {
-      "source": "ostrom-polycentric-governance",
-      "target": "tragedy-of-the-commons",
+      "source": "regulatory-capture",
+      "target": "public-choice-theory",
       "type": "references",
       "label": "mentions"
     },
     {
-      "source": "ostrom-polycentric-governance",
-      "target": "subsidiarity",
+      "source": "regulatory-capture",
+      "target": "goodharts-law",
       "type": "references",
       "label": "mentions"
     },
@@ -411,8 +496,6 @@
   ],
   "categories": [
     "Law",
-    "Policy",
-    "Economics",
     "Society"
   ]
 }

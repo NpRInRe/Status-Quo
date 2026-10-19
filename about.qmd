@@ -1,29 +1,23 @@
 ---
-title: "About the Frameworks Repository"
-subtitle: "An open, interconnected knowledge graph for public policy, law, economics, and society."
+title: "About Status Quo"
+subtitle: "Society’s existing states of affairs in law, policy, politics, and culture."
 ---
 
-## Philosophy & Architecture
+## About the Blog
 
-This repository is modeled after modern digital gardens and networked knowledge bases (such as [Frameworks for Public Policy](https://frameworks.pranaykotas.com/) and Obsidian knowledge graphs).
+**Status Quo** is an independent publication and interconnected writing archive by **Neeraj Paulose Raj (NPR)**.
 
-Rather than siloing concepts into linear chapters or static encyclopedic entries, each framework is treated as a **node** in an evolving relational graph.
+Most blogs present articles as a disposable reverse-chronological stream: an essay is published, read for a few days, and then buried beneath newer posts. But real-world questions—whether about biometric state surveillance, digital privacy, constitutional jurisprudence, market failures, or community governance—do not exist in isolation. They connect, contradict, and build on one another over years.
 
-### 1. Dual Views: Wikilinks & Graph
+This site structures essays and underlying concepts as a **networked knowledge graph**:
+- **Law:** Legal regimes, constitutional questions, rights, digital privacy jurisprudence, courts, and statutory frameworks.
+- **Society:** The broader social order—encompassing public policy, economic mechanisms, incentives, political dynamics, community governance, and culture.
 
-- **List / Reader View:** Presents clean, long-form analytical prose with Wikipedia-style `[[wikilinks]]`, an automatically updated list of **Backlinks** (wherever another framework cites this entry), and **Typed Relations** categorized by function.
-- **Graph View:** A dynamic, force-directed topological map showing cluster formations, cross-disciplinary bridges, and structural hubs. Click on any node to view its local neighborhood (1–2 hops) or inspect its thesis.
+## How to Navigate: List & Graph Views
 
-### 2. Typed Relations Ontology
+1. **List View:** Read complete long-form essays and analytical entries. Within every piece, you’ll find Wikipedia-style `[[wikilinks]]` pointing to underlying concepts, as well as an automatically updated **Connected Concepts** and **Referenced In (Backlinks)** section showing which other essays or ideas connect to it.
+2. **Graph View:** An interactive, force-directed topological map. Explore how legal principles intersect with societal and economic forces. Click any node to center its local neighborhood (1–2 hops), view its summary, or open the piece.
 
-Relations between frameworks are explicitly typed in frontmatter:
-- **`contrasts with`**: Highlights fundamental theoretical disputes (e.g., [[coase-theorem]] vs. [[pigouvian-tax]]).
-- **`solution for`**: Demonstrates institutional mechanisms addressing systemic failures (e.g., [[pigouvian-tax]] for [[tragedy-of-the-commons]]).
-- **`prerequisite for`**: Identifies foundational axioms required to understand a downstream phenomenon.
-- **`example of` / `supports`**: Illustrates concrete empirical or legal manifestations of abstract theorems.
+## Read & Subscribe
 
-### 3. Open Stack & Zero-Cost Hosting
-
-- **Quarto Static Engine:** High-performance, reproducible static site generator.
-- **Automated Pre-rendering:** Python build pipeline parsing frontmatter and wikilinks into structured `graph.json` and `backlinks.json`.
-- **Zero Cost:** Hosted completely for free on **GitHub Pages** or **Cloudflare Pages** with automated continuous deployment.
+All essays are published concurrently on Substack at [**statusquotoday.substack.com**](https://statusquotoday.substack.com). You can subscribe there for free to receive new dispatches directly in your inbox.

@@ -8,10 +8,8 @@
  */
 
 const CATEGORY_COLORS = {
-  "Law": "#ef4444",
-  "Policy": "#10b981",
-  "Economics": "#3b82f6",
-  "Society": "#8b5cf6",
+  "Law": "#2563eb",
+  "Society": "#059669",
   "Default": "#64748b"
 };
 

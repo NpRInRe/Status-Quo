@@ -1,6 +1,6 @@
 ---
-title: "Knowledge Graph Explorer"
-subtitle: "Interactive force-directed graph of all conceptual frameworks and typed connections."
+title: "The Idea Graph"
+subtitle: "An interactive force-directed map of essays, legal doctrines, and societal dynamics in Status Quo."
 page-layout: full
 ---
 
@@ -10,7 +10,7 @@ page-layout: full
 
 <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 0;">
   <p style="color: #64748b; font-size: 0.95rem;">
-    Explore relationships between frameworks. <strong>Click a node</strong> to inspect and highlight its connections; <strong>double-click</strong> to visit its page. Drag nodes to explore cluster dynamics.
+    Explore relationships between essays, legal principles, and societal mechanisms. <strong>Click a node</strong> to inspect and highlight its connections; <strong>double-click</strong> to visit its page. Drag nodes to explore clusters.
   </p>
 
   <div class="graph-viewport-container" style="height: 650px;">
@@ -21,25 +21,18 @@ page-layout: full
     <div id="main-graph-canvas" style="width: 100%; height: 650px;"></div>
   </div>
 
-  <!-- Legend -->
-  <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.25rem; font-size: 0.9rem; color: #475569;">
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <span style="width: 14px; height: 14px; border-radius: 50%; background: #ef4444; display: inline-block;"></span> Law
+  <!-- 2 Category Legend -->
+  <div style="display: flex; justify-content: center; gap: 2.5rem; margin-top: 1.25rem; font-size: 0.95rem; color: #334155;">
+    <span style="display: flex; align-items: center; gap: 0.5rem;">
+      <span style="width: 14px; height: 14px; border-radius: 50%; background: #2563eb; display: inline-block;"></span> <strong>Law</strong> (Rights, Jurisprudence & Privacy)
     </span>
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <span style="width: 14px; height: 14px; border-radius: 50%; background: #10b981; display: inline-block;"></span> Policy
-    </span>
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <span style="width: 14px; height: 14px; border-radius: 50%; background: #3b82f6; display: inline-block;"></span> Economics
-    </span>
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <span style="width: 14px; height: 14px; border-radius: 50%; background: #8b5cf6; display: inline-block;"></span> Society
+    <span style="display: flex; align-items: center; gap: 0.5rem;">
+      <span style="width: 14px; height: 14px; border-radius: 50%; background: #059669; display: inline-block;"></span> <strong>Society</strong> (Policy, Economics, Culture & Governance)
     </span>
   </div>
 </div>
 
 <script>
-  // Ensure the graph renders on dedicated page
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       renderMainGraph();

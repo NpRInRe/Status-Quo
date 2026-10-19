@@ -1,6 +1,6 @@
 ---
-title: "Law Frameworks"
-subtitle: "Constitutional rules, jurisdiction, rights, and regulatory jurisprudence."
+title: "Law"
+subtitle: "Constitutional jurisprudence, digital rights, statutory regimes, and legal theory."
 listing:
   contents: "*.qmd"
   type: default
@@ -8,4 +8,4 @@ listing:
   sort: "title"
 ---
 
-Welcome to the Law collection. Explore legal structures, rights delineation, and jurisdictional models that govern institutional interactions.
+Essays and conceptual analyses exploring how the legal order mediates power, privacy, individual agency, and institutional design.

@@ -21,28 +21,28 @@ SCRIPTS_DIR = BASE_DIR / "scripts"
 
 NAVBAR_HTML = """
 <header class="navbar-header" style="background: #0f172a; color: #f8fafc; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1e293b;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
     <a href="/index.html" style="color: #ffffff; font-weight: 700; font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-      <span style="font-size: 1.3rem;">⚖️</span> Frameworks
+      <span style="font-size: 1.25rem;">⚖️</span> Status Quo
     </a>
     <nav style="display: flex; gap: 1.25rem; font-size: 0.95rem; align-items: center;">
       <a href="/index.html" style="color: #cbd5e1; text-decoration: none;">Home</a>
       <a href="/graph.html" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Graph View</a>
       <a href="/law/index.html" style="color: #cbd5e1; text-decoration: none;">Law</a>
-      <a href="/policy/index.html" style="color: #cbd5e1; text-decoration: none;">Policy</a>
-      <a href="/economics/index.html" style="color: #cbd5e1; text-decoration: none;">Economics</a>
       <a href="/society/index.html" style="color: #cbd5e1; text-decoration: none;">Society</a>
       <a href="/about.html" style="color: #94a3b8; text-decoration: none;">About</a>
+      <a href="https://statusquotoday.substack.com" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Substack ↗</a>
     </nav>
   </div>
 </header>
 """
 
 FOOTER_HTML = """
-<footer style="margin-top: 5rem; padding: 2rem 1.5rem; background: #f8fafc; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 0.9rem;">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <p style="margin-bottom: 0.5rem;"><strong>Frameworks for Policy, Law & Society</strong> • Dual Wikilink & Graph Engine</p>
-    <p style="margin: 0; font-size: 0.8rem;">Modeled on <a href="https://frameworks.pranaykotas.com/" target="_blank" rel="noopener" style="color: #2563eb;">frameworks.pranaykotas.com</a>. Free open-source hosting on GitHub Pages.</p>
+<footer style="margin-top: 5rem; padding: 2.5rem 1.5rem; background: #f8fafc; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 0.9rem;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <p style="margin-bottom: 0.4rem; font-weight: 700; color: #0f172a; font-size: 1rem;">Status Quo</p>
+    <p style="margin-bottom: 0.75rem; color: #64748b; font-size: 0.85rem;">Society’s existing states of affairs in law, policy, politics, and culture.</p>
+    <p style="margin: 0; font-size: 0.8rem; color: #94a3b8;">© Neeraj Paulose Raj • An interconnected knowledge blog</p>
   </div>
 </footer>
 """
@@ -147,12 +147,10 @@ def build_site():
     import build_graph
     build_graph.main()
     
-    if SITE_DIR.exists():
-        shutil.rmtree(SITE_DIR)
-    SITE_DIR.mkdir(parents=True)
+    SITE_DIR.mkdir(parents=True, exist_ok=True)
     
     # Copy assets
-    shutil.copytree(ASSETS_DIR, SITE_DIR / "assets")
+    shutil.copytree(ASSETS_DIR, SITE_DIR / "assets", dirs_exist_ok=True)
     
     # Process all .qmd files
     for qmd in BASE_DIR.rglob("*.qmd"):

@@ -160,10 +160,8 @@ body {
   align-self: flex-start;
 }
 
-.badge-law { background: #fef2f2; color: #b91c1c; }
-.badge-policy { background: #f0fdf4; color: #15803d; }
-.badge-economics { background: #eff6ff; color: #1d4ed8; }
-.badge-society { background: #faf5ff; color: #7e22ce; }
+.badge-law { background: #eff6ff; color: #1d4ed8; }
+.badge-society { background: #ecfdf5; color: #047857; }
 
 .card-title {
   font-size: 1.15rem;
