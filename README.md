@@ -1,6 +1,6 @@
-# Status Quo — Personal Knowledge Blog & Idea Graph
+# Status Quo —Curate a marketplace of ideas and information in;
 
-**Author:** Neeraj Paulose Raj (NpRInRe)  
+**Author:** Neeraj Paulose Raj
 **Subtitle:** Existing states of affairs of Law & Society  
 **Site:** [nprinre.github.io/Status-Quo](https://nprinre.github.io/Status-Quo/)  
 **Substack:** [statusquotoday.substack.com](https://statusquotoday.substack.com)
