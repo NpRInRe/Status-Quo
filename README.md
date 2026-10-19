@@ -1,7 +1,8 @@
 # Status Quo — Personal Knowledge Blog & Idea Graph
 
-**Author:** Neeraj Paulose Raj (NPR)  
-**Subtitle:** Society’s existing states of affairs in law, policy, politics, and culture.  
+**Author:** Neeraj Paulose Raj (NpRInRe)  
+**Subtitle:** Existing states of affairs of Law & Society  
+**Site:** [nprinre.github.io/Status-Quo](https://nprinre.github.io/Status-Quo/)  
 **Substack:** [statusquotoday.substack.com](https://statusquotoday.substack.com)
 
 A personal blog and digital garden that connects long-form essays with underlying conceptual models. Every piece is part of an evolving, searchable relational graph with dual **List View** and **Interactive Idea Graph View**.
