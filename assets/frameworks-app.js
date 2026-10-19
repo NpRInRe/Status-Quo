@@ -20,15 +20,17 @@ let activeGraphSimulation = null;
 let currentHopDistance = 1;
 let selectedNodeId = null;
 
+const BASE_PATH = window.location.pathname.includes("/Status-Quo") ? "/Status-Quo" : "";
+
 // Initialize on DOM load
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const [graphRes, backlinksRes] = await Promise.all([
-      fetch("/assets/graph.json").catch(() => fetch("../assets/graph.json")),
-      fetch("/assets/backlinks.json").catch(() => fetch("../assets/backlinks.json"))
+      fetch(`${BASE_PATH}/assets/graph.json`).catch(() => fetch("../assets/graph.json")),
+      fetch(`${BASE_PATH}/assets/backlinks.json`).catch(() => fetch("../assets/backlinks.json"))
     ]);
     
-    if (graphRes.ok) globalGraphData = await graphRes.json();
+    if (graphRes && graphRes.ok) globalGraphData = await graphRes.json();
     if (backlinksRes && backlinksRes.ok) globalBacklinksData = await backlinksRes.json();
   } catch (e) {
     console.warn("Could not load graph data files directly via fetch:", e);
@@ -368,7 +370,8 @@ function renderGraph(container, rawNodes, rawEdges, options = {}) {
       // Double click -> navigate directly
       clearTimeout(clickTimeout);
       clickTimeout = null;
-      window.location.href = d.url;
+      const targetUrl = (d.url.startsWith("/") && BASE_PATH) ? `${BASE_PATH}${d.url}` : d.url;
+      window.location.href = targetUrl;
     } else {
       // Single click -> highlight & update URL state
       clickTimeout = setTimeout(() => {
@@ -410,7 +413,7 @@ async function initNewsletterExcerpts() {
   if (!container) return;
 
   try {
-    const res = await fetch("/assets/newsletter_excerpts.json").catch(() => fetch("../assets/newsletter_excerpts.json"));
+    const res = await fetch(`${BASE_PATH}/assets/newsletter_excerpts.json`).catch(() => fetch("../assets/newsletter_excerpts.json"));
     if (!res.ok) return;
     globalNewsletterData = await res.json();
     renderNewsletterCards(globalNewsletterData);

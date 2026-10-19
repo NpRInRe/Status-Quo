@@ -17,20 +17,19 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SITE_DIR = BASE_DIR / "_site"
 ASSETS_DIR = BASE_DIR / "assets"
-SCRIPTS_DIR = BASE_DIR / "scripts"
-
-NAVBAR_HTML = """
+def get_navbar_html(root_prefix="./"):
+    return f"""
 <header class="navbar-header" style="background: #0f172a; color: #f8fafc; padding: 0.85rem 1.5rem; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1e293b;">
   <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-    <a href="/index.html" style="color: #ffffff; font-weight: 700; font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+    <a href="{root_prefix}index.html" style="color: #ffffff; font-weight: 700; font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
       <span style="font-size: 1.25rem;">⚖️</span> Status Quo
     </a>
     <nav style="display: flex; gap: 1.25rem; font-size: 0.95rem; align-items: center;">
-      <a href="/index.html" style="color: #cbd5e1; text-decoration: none;">Home</a>
-      <a href="/graph.html" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Graph View</a>
-      <a href="/law/index.html" style="color: #cbd5e1; text-decoration: none;">Law</a>
-      <a href="/society/index.html" style="color: #cbd5e1; text-decoration: none;">Society</a>
-      <a href="/about.html" style="color: #94a3b8; text-decoration: none;">About</a>
+      <a href="{root_prefix}index.html" style="color: #cbd5e1; text-decoration: none;">Home</a>
+      <a href="{root_prefix}graph.html" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Graph View</a>
+      <a href="{root_prefix}law/index.html" style="color: #cbd5e1; text-decoration: none;">Law</a>
+      <a href="{root_prefix}society/index.html" style="color: #cbd5e1; text-decoration: none;">Society</a>
+      <a href="{root_prefix}about.html" style="color: #94a3b8; text-decoration: none;">About</a>
       <a href="https://statusquotoday.substack.com" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Substack ↗</a>
     </nav>
   </div>
@@ -128,12 +127,12 @@ def render_page(title, body_html, root_prefix="./"):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} — Frameworks Knowledge Graph</title>
+  <title>{title} — Status Quo</title>
   <link rel="stylesheet" href="{root_prefix}assets/styles.css">
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body style="margin: 0; background-color: #ffffff; color: #1e293b; line-height: 1.6;">
-  {NAVBAR_HTML}
+  {get_navbar_html(root_prefix)}
   <main style="max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;">
     {body_html}
   </main>
