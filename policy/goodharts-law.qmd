@@ -50,6 +50,7 @@ Robust public administration relies on holistic, multidimensional evaluation, ad
 
 ### Backlinks (Linked From)
 
+- [The Privacy Paradox & Digital Identity](/law/privacy-paradox.html) `(is measures)`
 - [Regulatory Capture](/policy/regulatory-capture.html) `(is measures)`
 - [Pigouvian Tax](/economics/pigouvian-tax.html) `(is prerequisite for)`
 

@@ -52,6 +52,7 @@ Rooted in [[public-choice-theory]], regulatory capture explains why well-intenti
 
 ### Backlinks (Linked From)
 
+- [The Privacy Paradox & Digital Identity](/law/privacy-paradox.html) `(is related to)`
 - [Goodhart's Law](/policy/goodharts-law.html) `(is measures)`
 - [Coase Theorem](/economics/coase-theorem.html) `(is related to)`
 - [Public Choice Theory](/economics/public-choice-theory.html) `(is prerequisite for)`

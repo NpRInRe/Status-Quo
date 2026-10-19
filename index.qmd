@@ -180,11 +180,24 @@ page-layout: full
       <p class="card-summary">When a measure becomes a target, it ceases to be a good measure as actors game the metric.</p>
     </a>
 
-    <a href="law/subsidiarity.html" class="framework-card">
-      <span class="card-category-badge badge-law">Law</span>
-      <h3 class="card-title">Subsidiarity</h3>
-      <p class="card-summary">Principle that social and political problems should be resolved by the most immediate and localized authority feasible.</p>
+    <a href="law/privacy-paradox.html" class="framework-card">
+      <span class="card-category-badge badge-law">Law & Policy</span>
+      <h3 class="card-title">The Privacy Paradox & Digital Identity</h3>
+      <p class="card-summary">Surrendering biometric entitlements for marginal queue convenience; surveillance creep vs constitutional data protections.</p>
     </a>
+  </div>
+
+  <!-- NEWSLETTER EXCERPTS SECTION (PHASE 3) -->
+  <div class="newsletter-section-container">
+    <h2 class="section-heading">
+      <span>📬 Newsletter Excerpts & Analysis</span>
+    </h2>
+    <p style="color: #64748b; font-size: 0.95rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">
+      Real-world dispatches connecting theoretical frameworks to live policy debates. Loaded from Substack archives.
+    </p>
+    <div id="newsletter-excerpts-container">
+      <div style="color: #94a3b8; font-size: 0.9rem; padding: 1rem 0;">Loading newsletter excerpts...</div>
+    </div>
   </div>
 
 </div>

@@ -17,6 +17,7 @@ const CATEGORY_COLORS = {
 
 let globalGraphData = null;
 let globalBacklinksData = null;
+let globalNewsletterData = null;
 let activeGraphSimulation = null;
 let currentHopDistance = 1;
 let selectedNodeId = null;
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   initSearch();
   initWikilinksAndBacklinks();
   initLocalGraph();
+
+  // Load Newsletter Excerpts asynchronously after initial load (Phase 3)
+  setTimeout(initNewsletterExcerpts, 600);
 });
 
 /* ----------------------------------------------------
@@ -401,36 +405,90 @@ function renderGraph(container, rawNodes, rawEdges, options = {}) {
 }
 
 /* ----------------------------------------------------
-   4. Wikilinks & Backlinks Auto-Hydration
+   5. Newsletter Excerpts (Loaded Asynchronously)
 ---------------------------------------------------- */
-function initWikilinksAndBacklinks() {
-  if (!globalGraphData) return;
-  
-  const nodeMap = new Map();
-  globalGraphData.nodes.forEach(n => nodeMap.set(n.id, n));
-  
-  // Transform body text [[item-id]] -> <a href="...">
-  const contentBody = document.querySelector("main.content, article, .quarto-body");
-  if (contentBody) {
-    const walker = document.createTreeWalker(contentBody, NodeFilter.SHOW_TEXT);
-    const textNodes = [];
-    while (walker.nextNode()) textNodes.push(walker.currentNode);
-    
-    const wikilinkRegex = /\[\[([a-zA-Z0-9_\-]+)(?:\|([^\]]+))?\]\]/g;
-    
-    textNodes.forEach(node => {
-      if (node.parentElement && ["SCRIPT", "STYLE", "A"].includes(node.parentElement.tagName)) return;
-      if (wikilinkRegex.test(node.nodeValue)) {
-        const span = document.createElement("span");
-        span.innerHTML = node.nodeValue.replace(wikilinkRegex, (match, id, alias) => {
-          const target = nodeMap.get(id);
-          if (target) {
-            return `<a href="${target.url}" class="wikilink" title="${target.summary}">${alias || target.title}</a>`;
-          }
-          return alias || id;
-        });
-        node.parentElement.replaceChild(span, node);
-      }
-    });
+async function initNewsletterExcerpts() {
+  const container = document.getElementById("newsletter-excerpts-container");
+  if (!container) return;
+
+  try {
+    const res = await fetch("/assets/newsletter_excerpts.json").catch(() => fetch("../assets/newsletter_excerpts.json"));
+    if (!res.ok) return;
+    globalNewsletterData = await res.json();
+    renderNewsletterCards(globalNewsletterData);
+  } catch (err) {
+    console.warn("Could not load newsletter excerpts:", err);
   }
 }
+
+function renderNewsletterCards(items) {
+  const container = document.getElementById("newsletter-excerpts-container");
+  if (!container) return;
+
+  if (!items || items.length === 0) {
+    container.innerHTML = "<p style='color: #94a3b8; font-size: 0.9rem;'>No matching excerpts found.</p>";
+    return;
+  }
+
+  // Group by publication / author
+  const grouped = {};
+  items.forEach(item => {
+    const groupKey = `${item.publication} • ${item.author}`;
+    grouped[groupKey] = grouped[groupKey] || [];
+    grouped[groupKey].push(item);
+  });
+
+  let html = "";
+  for (const [groupName, groupItems] of Object.entries(grouped)) {
+    html += `
+      <div style="margin-bottom: 2rem;">
+        <h4 style="font-size: 1.05rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📰</span> ${groupName}
+        </h4>
+        <div class="newsletter-grid">
+    `;
+    
+    groupItems.forEach(post => {
+      html += `
+        <div class="newsletter-card" data-frameworks="${(post.matched_frameworks || []).join(' ')}">
+          <div class="newsletter-meta">
+            <span class="newsletter-author-badge">${post.publication}</span>
+            <span>${post.date.slice(0, 16)}</span>
+          </div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #0f172a;">
+            <a href="${post.url}" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">${post.title}</a>
+          </h4>
+          <p class="newsletter-quote">"${post.excerpt}"</p>
+          <a href="${post.url}" target="_blank" rel="noopener" class="newsletter-link">
+            Read full dispatch on Substack &rarr;
+          </a>
+        </div>
+      `;
+    });
+    
+    html += `</div></div>`;
+  }
+
+  container.innerHTML = html;
+}
+
+// Update filterListItems to also filter newsletter excerpts
+const origFilterListItems = filterListItems;
+filterListItems = function(query) {
+  origFilterListItems(query);
+  
+  if (!globalNewsletterData) return;
+  if (!query) {
+    renderNewsletterCards(globalNewsletterData);
+    return;
+  }
+  
+  const filtered = globalNewsletterData.filter(item => {
+    const text = (item.title + " " + item.excerpt + " " + (item.description || "") + " " + item.author).toLowerCase();
+    const matchedFws = (item.matched_frameworks || []).join(" ").toLowerCase();
+    return text.includes(query) || matchedFws.includes(query);
+  });
+  
+  renderNewsletterCards(filtered);
+};
+

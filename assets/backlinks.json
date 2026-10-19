@@ -1,5 +1,13 @@
 {
+  "privacy-paradox": [],
   "subsidiarity": [
+    {
+      "id": "privacy-paradox",
+      "title": "The Privacy Paradox & Digital Identity",
+      "url": "/law/privacy-paradox.html",
+      "category": "Law",
+      "type": "is contrasts with"
+    },
     {
       "id": "public-choice-theory",
       "title": "Public Choice Theory",
@@ -24,6 +32,13 @@
   ],
   "goodharts-law": [
     {
+      "id": "privacy-paradox",
+      "title": "The Privacy Paradox & Digital Identity",
+      "url": "/law/privacy-paradox.html",
+      "category": "Law",
+      "type": "is measures"
+    },
+    {
       "id": "regulatory-capture",
       "title": "Regulatory Capture",
       "url": "/policy/regulatory-capture.html",
@@ -39,6 +54,13 @@
     }
   ],
   "regulatory-capture": [
+    {
+      "id": "privacy-paradox",
+      "title": "The Privacy Paradox & Digital Identity",
+      "url": "/law/privacy-paradox.html",
+      "category": "Law",
+      "type": "is related to"
+    },
     {
       "id": "goodharts-law",
       "title": "Goodhart's Law",

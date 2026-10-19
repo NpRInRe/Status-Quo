@@ -1,6 +1,20 @@
 {
   "nodes": [
     {
+      "id": "privacy-paradox",
+      "title": "The Privacy Paradox & Digital Identity",
+      "category": "Law",
+      "categories": [
+        "Law",
+        "Policy",
+        "Society"
+      ],
+      "summary": "The systemic dichotomy where citizens voice deep abstract concerns regarding personal data sovereignty yet consistently surrender biometric and behavioral entitlements in exchange for marginal transaction convenience.",
+      "url": "/law/privacy-paradox.html",
+      "start_here": true,
+      "degree": 6
+    },
+    {
       "id": "subsidiarity",
       "title": "Subsidiarity",
       "category": "Law",
@@ -11,7 +25,7 @@
       "summary": "A principle of social and constitutional organization holding that social and political issues ought to be dealt with at the most immediate (or local) level that is consistent with their resolution.",
       "url": "/law/subsidiarity.html",
       "start_here": false,
-      "degree": 9
+      "degree": 11
     },
     {
       "id": "goodharts-law",
@@ -24,7 +38,7 @@
       "summary": "When a measure becomes a target, it ceases to be a good measure\u2014actors optimize specifically for the metric rather than the underlying objective.",
       "url": "/policy/goodharts-law.html",
       "start_here": false,
-      "degree": 8
+      "degree": 10
     },
     {
       "id": "regulatory-capture",
@@ -37,7 +51,7 @@
       "summary": "A systemic failure wherein a government regulatory agency created to act in the public interest becomes dominated and guided by the commercial or special interests of the industry it regulates.",
       "url": "/policy/regulatory-capture.html",
       "start_here": false,
-      "degree": 11
+      "degree": 13
     },
     {
       "id": "coase-theorem",
@@ -107,6 +121,24 @@
   ],
   "edges": [
     {
+      "source": "privacy-paradox",
+      "target": "regulatory-capture",
+      "type": "related to",
+      "label": "related to"
+    },
+    {
+      "source": "privacy-paradox",
+      "target": "goodharts-law",
+      "type": "measures",
+      "label": "measures"
+    },
+    {
+      "source": "privacy-paradox",
+      "target": "subsidiarity",
+      "type": "contrasts with",
+      "label": "contrasts with"
+    },
+    {
       "source": "subsidiarity",
       "target": "ostrom-polycentric-governance",
       "type": "prerequisite for",
@@ -237,6 +269,24 @@
       "target": "coase-theorem",
       "type": "contrasts with",
       "label": "contrasts with"
+    },
+    {
+      "source": "privacy-paradox",
+      "target": "goodharts-law",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "privacy-paradox",
+      "target": "regulatory-capture",
+      "type": "references",
+      "label": "mentions"
+    },
+    {
+      "source": "privacy-paradox",
+      "target": "subsidiarity",
+      "type": "references",
+      "label": "mentions"
     },
     {
       "source": "subsidiarity",

@@ -50,6 +50,7 @@ Subsidiarity provides the constitutional grounding for Elinor Ostrom's research 
 
 ### Backlinks (Linked From)
 
+- [The Privacy Paradox & Digital Identity](/law/privacy-paradox.html) `(is contrasts with)`
 - [Public Choice Theory](/economics/public-choice-theory.html) `(is supports)`
 - [Ostrom's Polycentric Governance](/society/ostrom-polycentric-governance.html) `(is example of)`
 - [Goodhart's Law](/policy/goodharts-law.html) `(mentions this)`

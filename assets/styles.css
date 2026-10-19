@@ -335,3 +335,75 @@ a.wikilink {
 a.wikilink:hover {
   text-decoration-style: solid;
 }
+
+/* Newsletter Excerpts Section (Phase 3) */
+.newsletter-section-container {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px dashed var(--border-color);
+}
+
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid #f97316;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  border-color: #cbd5e1;
+  border-left-color: #ea580c;
+}
+
+.newsletter-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.newsletter-author-badge {
+  background: #fff7ed;
+  color: #c2410c;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.newsletter-quote {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.newsletter-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.newsletter-link:hover {
+  text-decoration: underline;
+}
