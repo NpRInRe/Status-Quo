@@ -1,11 +1,10 @@
-name: Build & Deploy Quarto Knowledge Graph
+name: Build & Deploy Status Quo
 
 on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -17,6 +16,9 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -27,17 +29,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate Graph and Backlinks
+      - name: Install dependencies
+        run: |
+          pip install numpy
+
+      - name: Build site, graph & embeddings
         run: |
           python scripts/build_graph.py
+          python scripts/build_embeddings.py
+          python -c "import sys; sys.path.append('scripts'); import serve; serve.build_site()"
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: 'pre-release'
-
-      - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
