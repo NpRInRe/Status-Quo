@@ -41,7 +41,7 @@ FOOTER_HTML = """
 <footer style="margin-top: 5rem; padding: 2.5rem 1.5rem; background: #f8fafc; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 0.9rem;">
   <div style="max-width: 900px; margin: 0 auto;">
     <p style="margin-bottom: 0.4rem; font-weight: 700; color: #0f172a; font-size: 1rem;">Status Quo</p>
-    <p style="margin-bottom: 0.75rem; color: #64748b; font-size: 0.85rem;">Society’s existing states of affairs in law, policy, politics, and culture.</p>
+    <p style="margin-bottom: 0.75rem; color: #64748b; font-size: 0.85rem;">Existing states of affairs of Law & Society</p>
     <p style="margin: 0; font-size: 0.8rem; color: #94a3b8;">© Neeraj Paulose Raj • An interconnected knowledge blog</p>
   </div>
 </footer>

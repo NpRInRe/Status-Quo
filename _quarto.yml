@@ -5,7 +5,7 @@ project:
 
 website:
   title: "Status Quo"
-  description: "Society’s existing states of affairs in law, policy, politics, and culture. An interconnected blog by Neeraj Paulose Raj."
+  description: "Existing states of affairs of Law & Society"
   site-url: "https://statusquotoday.substack.com"
   navbar:
     background: "#0f172a"

@@ -1,67 +1,162 @@
-/* Custom styles for Frameworks static site */
+/* ===================================================
+   Status Quo — Substack Publication Theme
+   Existing states of affairs of Law & Society
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --bg-subtle: #f8fafc;
-  --border-color: #e2e8f0;
-  --text-muted: #64748b;
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --card-hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --badge-bg: #eff6ff;
-  --badge-text: #1d4ed8;
+  --primary-color: #0f172a;
+  --accent-color: #ea580c; /* Substack warm orange accent */
+  --accent-hover: #c2410c;
+  --law-color: #2563eb;
+  --society-color: #059669;
+  --bg-page: #ffffff;
+  --bg-subtle: #fbfbfb;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --text-main: #1c1917;
+  --text-muted: #78716c;
+  --text-secondary: #44403c;
+  --font-serif: "Newsreader", Charter, Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+  --card-hover-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #1e293b;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.65;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Hero / Search Section */
+/* Editorial Serif for Headers & Essay Bodies */
+h1, h2, h3, .article-title, .hero-title {
+  font-family: var(--font-serif);
+  color: #0c0a09;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+main.content, article, .quarto-body {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: #292524;
+}
+
+main.content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Hero / Header Section (Substack Publication Style) */
 .hero-container {
-  padding: 3rem 1rem 2rem 1rem;
+  padding: 3.5rem 1rem 2.5rem 1rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
+.publication-avatar-wrap {
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.publication-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 3px solid #ffffff;
+  outline: 1px solid var(--border-color);
+}
+
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.025em;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #0c0a09;
+}
+
+.hero-tagline {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #44403c;
   margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-.hero-subtitle {
-  font-size: 1.15rem;
+.hero-author-byline {
+  font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
+.hero-bio-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: #57534e;
+  max-width: 620px;
+  margin: 0 auto 1.75rem auto;
+  line-height: 1.55;
+  padding: 0 1rem;
+  border-left: 2px solid #e7e5e4;
+  border-right: 2px solid #e7e5e4;
+}
+
+.substack-subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+  transition: all 0.2s ease;
+}
+
+.substack-subscribe-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+}
+
+/* Search Box */
 .search-box-wrapper {
   position: relative;
-  max-width: 650px;
-  margin: 0 auto 2rem auto;
+  max-width: 640px;
+  margin: 2.5rem auto 1.75rem auto;
 }
 
 .framework-search-input {
   width: 100%;
-  padding: 1rem 1.25rem 1rem 3rem;
-  font-size: 1.05rem;
+  padding: 0.95rem 1.25rem 0.95rem 3rem;
+  font-size: 1rem;
   border-radius: 9999px;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   background: #ffffff;
   box-shadow: var(--card-shadow);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   outline: none;
+  box-sizing: border-box;
 }
 
 .framework-search-input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  border-color: #a8a29e;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
 .search-icon-svg {
@@ -69,9 +164,9 @@ body {
   left: 1.1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  color: var(--text-muted);
+  width: 18px;
+  height: 18px;
+  color: #a8a29e;
   pointer-events: none;
 }
 
@@ -79,25 +174,26 @@ body {
 .view-toggle-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .view-toggle {
   display: inline-flex;
-  background: #e2e8f0;
-  padding: 4px;
+  background: #f5f5f4;
+  padding: 3px;
   border-radius: 9999px;
   user-select: none;
+  border: 1px solid #e7e5e4;
 }
 
 .toggle-btn {
-  padding: 0.5rem 1.25rem;
+  padding: 0.45rem 1.2rem;
   border-radius: 9999px;
   border: none;
   background: transparent;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #475569;
+  color: #78716c;
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
@@ -107,33 +203,36 @@ body {
 
 .toggle-btn.active {
   background: #ffffff;
-  color: #0f172a;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  color: #1c1917;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* Start Here Cards Row */
+/* Section Headings */
 .section-heading {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 1.25rem 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.6rem;
 }
 
+/* Card Grids */
 .start-here-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
 .framework-card {
   background: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  padding: 1.4rem;
+  transition: all 0.2s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -141,55 +240,105 @@ body {
 }
 
 .framework-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--card-hover-shadow);
-  border-color: #cbd5e1;
+  border-color: #d6d3d1;
 }
 
+/* Category Badges */
 .card-category-badge {
   display: inline-block;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: var(--badge-bg);
-  color: var(--badge-text);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   align-self: flex-start;
 }
 
-.badge-law { background: #eff6ff; color: #1d4ed8; }
-.badge-society { background: #ecfdf5; color: #047857; }
+.badge-law {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.badge-society {
+  background: #ecfdf5;
+  color: #047857;
+}
 
 .card-title {
-  font-size: 1.15rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
-  color: #0f172a;
+  color: #0c0a09;
+  line-height: 1.3;
 }
 
 .card-summary {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.45;
+  font-size: 0.95rem;
+  color: #57534e;
+  line-height: 1.5;
   flex-grow: 1;
+  margin: 0;
+}
+
+/* Featured Lead Essay Card */
+.lead-essay-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+}
+
+.lead-essay-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  border-color: #d6d3d1;
+}
+
+@media (min-width: 768px) {
+  .lead-essay-card {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.lead-essay-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lead-essay-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  background-color: #f5f5f4;
 }
 
 /* Category Grid */
 .category-overview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .category-card {
-  background: #f8fafc;
+  background: var(--bg-subtle);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 8px;
+  padding: 1.75rem;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
@@ -197,21 +346,16 @@ body {
 
 .category-card:hover {
   background: #ffffff;
-  border-color: var(--primary-color);
+  border-color: #a8a29e;
   box-shadow: var(--card-hover-shadow);
 }
 
-.category-icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Graph Container */
+/* Graph Viewport */
 .graph-viewport-container {
   width: 100%;
   height: 600px;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -222,98 +366,60 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   z-index: 10;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .graph-tooltip {
   position: absolute;
-  background: #0f172a;
+  background: #1c1917;
   color: #ffffff;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 0.85rem;
   border-radius: 6px;
   font-size: 0.8rem;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.15s ease;
-  max-width: 250px;
+  max-width: 260px;
   z-index: 20;
+  line-height: 1.4;
 }
 
-/* Backlinks and Typed Relations Box */
+/* Relations & Backlinks Box */
 .relations-container {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background: #f8fafc;
+  margin-top: 3.5rem;
+  padding: 1.75rem;
+  background: #fafaf9;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
-.relation-group {
-  margin-bottom: 1.25rem;
-}
-
-.relation-group-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.relation-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.relation-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 9999px;
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  font-size: 0.85rem;
-  color: #1e293b;
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-
-.relation-pill:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-  background: #eff6ff;
-}
-
-/* Local graph on item page */
+/* Local graph on essay page */
 .local-graph-box {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2.5rem 0;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
   overflow: hidden;
 }
 
 .local-graph-header {
-  padding: 0.75rem 1rem;
-  background: #f1f5f9;
-  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  background: #f5f5f4;
+  font-size: 0.85rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .local-graph-canvas {
@@ -323,7 +429,7 @@ body {
 
 /* Wikilink styling */
 a.wikilink {
-  color: var(--primary-color);
+  color: #1d4ed8;
   text-decoration: underline;
   text-decoration-style: dashed;
   text-underline-offset: 3px;
@@ -332,27 +438,28 @@ a.wikilink {
 
 a.wikilink:hover {
   text-decoration-style: solid;
+  color: #1e40af;
 }
 
-/* Newsletter Excerpts Section (Phase 3) */
+/* Newsletter Dispatches Section */
 .newsletter-section-container {
   margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 2px dashed var(--border-color);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .newsletter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .newsletter-card {
   background: #ffffff;
   border: 1px solid var(--border-color);
-  border-left: 4px solid #f97316;
-  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 6px;
   padding: 1.25rem;
   box-shadow: var(--card-shadow);
   transition: all 0.2s ease;
@@ -362,15 +469,14 @@ a.wikilink:hover {
 
 .newsletter-card:hover {
   box-shadow: var(--card-hover-shadow);
-  border-color: #cbd5e1;
-  border-left-color: #ea580c;
+  border-color: #d6d3d1;
 }
 
 .newsletter-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
   color: var(--text-muted);
 }
@@ -378,15 +484,18 @@ a.wikilink:hover {
 .newsletter-author-badge {
   background: #fff7ed;
   color: #c2410c;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 9999px;
   font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
 }
 
 .newsletter-quote {
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: #334155;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #44403c;
   font-style: italic;
   margin-bottom: 1rem;
   flex-grow: 1;
@@ -395,7 +504,7 @@ a.wikilink:hover {
 .newsletter-link {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #2563eb;
+  color: var(--accent-color);
   text-decoration: none;
   display: inline-flex;
   align-items: center;

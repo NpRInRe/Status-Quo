@@ -1,6 +1,6 @@
 ---
 title: "The Idea Graph"
-subtitle: "An interactive force-directed map of essays, legal doctrines, and societal dynamics in Status Quo."
+subtitle: "Existing states of affairs of Law & Society"
 page-layout: full
 ---
 
